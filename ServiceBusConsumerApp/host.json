@@ -1,0 +1,47 @@
+{
+    "version": "2.0",
+    "logging": {
+        "applicationInsights": {
+            "samplingSettings": {
+                "isEnabled": true,
+                "maxTelemetryItemsPerSecond": 20,
+                "excludedTypes": "Request"
+            },
+            "enableLiveMetricsFilters": true,
+            "enableDependencyTracking": true,
+            "enablePerformanceCountersCollection": true,
+            "httpAutoCollectionOptions": {
+                "enableHttpTriggerExtendedInfoCollection": true,
+                "enableW3CDistributedTracing": true,
+                "enableResponseHeaderInjection": true
+            }
+        },
+        "logLevel": {
+            "default": "Information",
+            "Host.Results": "Error",
+            "Function": "Information",
+            "Host.Aggregator": "Trace",
+            "Microsoft.Azure.Functions.Worker": "Information",
+            "ServiceBusConsumerApp": "Information"
+        }
+    },
+    "extensions": {
+        "serviceBus": {
+            "prefetchCount": 100,
+            "messageHandlerOptions": {
+                "autoComplete": true,
+                "maxConcurrentCalls": 16,
+                "maxAutoLockRenewalDuration": "00:05:00"
+            },
+            "sessionHandlerOptions": {
+                "maxAutoLockRenewalDuration": "00:05:00",
+                "messageWaitTimeout": "00:00:30"
+            },
+            "batchOptions": {
+                "maxMessageCount": 1000,
+                "operationTimeout": "00:01:00",
+                "autoComplete": true
+            }
+        }
+    }
+}
