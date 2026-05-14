@@ -1,4 +1,4 @@
-# AzureDotNet
+# AzureDotNet v2
 The following repository will hold various .NET applications and tools hosted in Azure
 
 ## Solution Architecture
