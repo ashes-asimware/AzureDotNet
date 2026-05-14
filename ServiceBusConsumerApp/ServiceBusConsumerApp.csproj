@@ -24,6 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Rest.ClientRuntime" Version="2.3.24" />
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
     <ProjectReference Include="..\AzureDotNet.Shared.Configuration\AzureDotNet.Shared.Configuration.csproj" />
   </ItemGroup>
 

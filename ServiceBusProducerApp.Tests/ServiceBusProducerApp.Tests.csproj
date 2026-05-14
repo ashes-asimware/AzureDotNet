@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
     <ProjectReference Include="..\ServiceBusProducerApp\ServiceBusProducerApp.csproj" />
   </ItemGroup>
 
